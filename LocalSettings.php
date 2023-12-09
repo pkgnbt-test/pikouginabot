@@ -154,5 +154,76 @@ require_once "$IP/extensions/Wikibase/client/ExampleSettings.php";
 
 wfLoadExtension( 'WikibaseLexeme' );
 
-// line 9773 = 'default' => false,
+// from /includes/MainConfigSchema.php
+
+// line 1504 = 'default' => 1024 * 1024 * 100,
+$wgMaxUploadSize = 1024 * 1024 * 1024;
+// line 1597 = 'default' => [ 'png', 'gif', 'jpg', 'jpeg', 'webp', ],
+$wgFileExtensions = [ 'png', 'gif', 'jpg', 'jpeg', 'webp', 'pdf', 'txt', 'xml' ];
+// line 1669 = 'default' => true,
+$wgStrictFileExtensions = false;
+// line 4671 = 'default' => [],
+// $wgExtraLanguageNames['en-va'] = 'Vatican English';
+// line 4918 = 'dynamicDefault' => true,
+$wgLocaltimezone = 'UTC';
+// line 6054 = 'default' => true,
+$wgCapitalLinks = false;
+// line 6081
+$wgNamespacesWithSubpages[NS_MAIN] = true;
+// line 6464 = 'default' => false,
+$wgRawHtml = true;
+// line 6477 = 'default' => false,
+$wgExternalLinkTarget = "_blank";
+// line 6539 = 'default' => true,
+$wgRestrictDisplayTitle = false;
+// line 7285 = 'default' =>
+// line 7288 => 'default',
+$wgDefaultUserOptions['date'] = 'ISO 8601';
+// line 7302 => 'unknown',
+$wgDefaultUserOptions['gender'] = 'male';
+$wgDefaultUserOptions['numberheadings'] = 1;
+// line 7314 => 7,
+$wgDefaultUserOptions['rcdays'] = 360;
+// line 7316 => 50,
+$wgDefaultUserOptions['rclimit'] = 1000;
+// line 7321 => 0,
+$wgDefaultUserOptions['showhiddencats'] = 1;
+// line 7679
+// mediawiki.org/wiki/Extension:Interwiki
+$wgGroupPermissions['*']['interwiki'] = true;
+// line 7887 = 'default' => [],
+$wgGroupsAddToSelf = [ '*' => true ];
+// line 9466 = 'default' => false,
 $wgDeprecationReleaseLimit = '1.0';
+// line 9676 = 'default' => false,
+$wgAdvancedSearchHighlighting = true;
+// line 10048 = 'default' => 90 * 24 * 3600,
+$wgRCMaxAge = 360 * 24 * 3600;
+// line 10693 = 'default' => false,
+$wgExportAllowAll = true;
+// line 11265 = 'default' => 'uppercase',
+$wgCategoryCollation = 'identity';
+
+// from /extensions/Wikibase/repo/config/Wikibase.default.php
+// mediawiki.org/wiki/Wikibase/Installation/Advanced_configuration
+
+// line 46 = 'statementSections' => [],
+$wgWBRepoSettings['statementSections'] = [
+  	'item' => [
+    		'statements' => null,
+    		'identifiers' => [
+      			'type' => 'dataType',
+      			'dataTypes' => [ 'external-id' ],
+    		],
+  	],
+];
+// line 51 = 'length' => 250,
+$wgWBRepoSettings['string-limits'] = [
+		'multilang' => [
+    		'length' => 1000,
+  	],
+];
+// line 134 = 'formatterUrlProperty' => null,
+// $wgWBRepoSettings['formatterUrlProperty'] = 'P1088136017';
+// line 139 = 'allowEntityImport' => false,
+$wgWBRepoSettings['allowEntityImport'] = true;
